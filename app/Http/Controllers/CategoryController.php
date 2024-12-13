@@ -24,7 +24,7 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required|unique:categories|max:255',
-            'description' => 'nullable',
+
         ]);
 
         Category::create($request->all());

@@ -14,9 +14,9 @@ class ProductController extends Controller
 
 
         if ($request->has('name') && !empty($request->name)) {
-            $nameParts = explode(' ', $request->name); // Split search term by spaces
+            $nameParts = explode(' ', $request->name);
             foreach ($nameParts as $part) {
-                $query->where('name', 'like', '%' . trim($part) . '%'); // Match each part of the name
+                $query->where('name', 'like', '%' . trim($part) . '%');
             }
         }
 
